@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="siteTitle">Персональный сайт Тимур Якушев</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="interactive-background"></canvas>
+
+    <button id="settings-trigger" class="settings-trigger-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
+            <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.23,5.03C8.64,5.27,8.11,5.59,7.61,5.97L5.22,5.01C5,4.94,4.75,5.01,4.63,5.22L2.71,8.54 C2.6,8.74,2.65,9.01,2.83,9.15l2.03,1.58C4.82,11.06,4.8,11.36,4.8,11.69c0,0.32,0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.38,2.22 c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.43-0.17,0.47-0.41l0.38-2.22c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0.01,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+        </svg>
+    </button>
+
+    <div id="settings-panel-overlay" class="dos-panel-overlay">
+        <div id="settings-panel" class="dos-panel">
+            <div class="dos-panel-title-bar">
+                <span data-lang-key="settingsPanelTitle">Настройки</span>
+                <button class="dos-panel-close-button" id="close-settings-panel">X</button>
+            </div>
+            <div class="dos-panel-content">
+                <fieldset class="dos-fieldset">
+                    <legend data-lang-key="settingsLangTitle">Язык</legend>
+                    <button class="dos-button lang-panel-button" data-lang="ru" data-lang-key="settingsLangRu">Русский</button>
+                    <button class="dos-button lang-panel-button" data-lang="en" data-lang-key="settingsLangEn">English</button>
+                    <button class="dos-button lang-panel-button" data-lang="sr" data-lang-key="settingsLangSr">Српски</button>
+                </fieldset>
+                <fieldset class="dos-fieldset">
+                    <legend data-lang-key="settingsThemeTitle">Тема</legend>
+                    <button class="dos-button theme-panel-button" data-theme-target="light" data-lang-key="settingsThemeLight">Светлая</button>
+                    <button class="dos-button theme-panel-button" data-theme-target="dark" data-lang-key="settingsThemeDark">Темная</button>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <svg class="monogram" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="15" y1="25" x2="85" y2="25"/>
+                <line x1="30" y1="25" x2="30" y2="75"/>
+                <line x1="70" y1="25" x2="70" y2="75"/>
+            </svg>
+            <h1 data-lang-key="headerTitle">Тимур Якушев</h1>
+            <p class="tagline" data-lang-key="headerTagline">задаю глупые вопросы умным людям</p>
+            <p data-lang-key="headerSubtitle">Технический директор | Team Lead AQA | Эксперт в автоматизации и создании IT-команд</p>
+            <a href="#contacts" class="cta-button" data-lang-key="contactMeButton">Связаться со мной</a>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2 data-lang-key="aboutTitle">Моя экспертиза</h2>
+                <p data-lang-key="aboutP1">Сочетаю глубокие технические навыки с опытом управления. Специализируюсь на создании высокоэффективных IT-команд и построении сложных процессов с нуля.</p>
+                <p data-lang-key="aboutP2">За 7 лет в IT прошел путь от инженера по тестированию до руководителя команды в Ozon. Работал в качестве вендора для Microsoft и Smartsheet. Моя цель — находить элегантные технические решения для сложных бизнес-задач.</p>
+            </section>
+            <section id="case-study">
+                <h2 data-lang-key="caseStudyTitle">Ключевой проект: Архитектура автотестов</h2>
+                <p><strong data-lang-key="caseStudyTaskLabel">Задача:</strong> <span data-lang-key="caseStudyTaskText">Обеспечить стабильность крупного мобильного приложения (1 млн+ пользователей) и многократно ускорить процесс регрессионного тестирования.</span></p>
+                <p><strong data-lang-key="caseStudySolutionLabel">Решение:</strong> <span data-lang-key="caseStudySolutionText">Вместе с командой, которую я собрал и развивал, мы разработали и внедрили с нуля новую архитектуру UI-автотестов на <code>Kotlin</code> и <code>Kaspresso</code>. В основе лежит паттерн <code>Page Object</code> с интуитивно понятным интерфейсом, позволяющий собирать тесты как конструктор. Я подготовил подробную документацию, что сократило время входа в проект для новых специалистов до нескольких дней.</span></p>
+                <p><strong data-lang-key="caseStudyResultsLabel">Результаты:</strong></p>
+                <ul>
+                    <li data-lang-key="caseStudyResult1">Покрытие тестами достигло 80%.</li>
+                    <li data-lang-key="caseStudyResult2">Время полного регресса сократилось до 15 минут (при 400+ UI-тестах).</li>
+                    <li data-lang-key="caseStudyResult3">0 критичных инцидентов, затронувших пользователей, за последние 4 года.</li>
+                    <li data-lang-key="caseStudyResult4">Команда выросла с 1 до 7 человек, каждый из которых успешно развивается и показывает высокие результаты.</li>
+                </ul>
+            </section>
+            <section id="services">
+                <h2 data-lang-key="servicesTitle">Услуги</h2>
+                <p data-lang-key="servicesP1">Если у вас есть идея, но вы не знаете, как ее реализовать, — приходите. Я помогу вам с технической экспертизой, соберу команду или лично разработаю решение для вашего продукта.</p>
+            </section>
+            <section id="resume">
+                <h2 data-lang-key="resumeTitle">Карьерный путь</h2>
+                <p data-lang-key="resumeP1">Тут резюме.</p>
+                <a href="Timur_Yakushev_CV.pdf" class="cta-button" data-lang-key="downloadResumeButton" download>Скачать полное резюме (PDF)</a>
+            </section>
+            
+            <section id="terminal-section">
+                <div class="terminal-container">
+                    <div class="terminal-title-bar">
+                        <div class="terminal-buttons">
+                            <span class="terminal-button red"></span>
+                            <span class="terminal-button yellow"></span>
+                            <span class="terminal-button green"></span>
+                        </div>
+                        <span class="terminal-title-text" data-lang-key="terminalWindowTitle">Терминал</span>
+                    </div>
+                    <div class="terminal-window" id="terminalOutputContainer">
+                        <div class="terminal-output" id="terminalOutput">
+                            </div>
+                        <div class="terminal-input-line">
+                            <span class="prompt"><span class="user" data-lang-key="terminalPromptUser">guest</span>@<span class="host" data-lang-key="terminalPromptHost">timur-yakushev.dev</span>:~$&nbsp;</span>
+                            <input type="text" id="terminalInput" class="terminal-input-field" autocomplete="off" spellcheck="false">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contacts">
+            <h2 data-lang-key="contactsTitle">Контакты</h2>
+            <p style="text-align: center;" data-lang-key="contactsP1">Готов обсудить ваш проект или ответить на вопросы.</p>
+            <ul>
+                <li><a href="mailto:timrik37@gmail.com" data-lang-key="contactEmail">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/ttyak/" data-lang-key="contactLinkedIn">LinkedIn</a></li>
+                <li><a href="https://github.com/TimurLeg" data-lang-key="contactGitHub">GitHub</a></li>
+                <li><a href="https://t.me/ttyak" data-lang-key="contactTelegram">Telegram</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
